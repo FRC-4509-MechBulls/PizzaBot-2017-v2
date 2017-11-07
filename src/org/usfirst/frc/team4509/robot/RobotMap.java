@@ -9,7 +9,7 @@ package org.usfirst.frc.team4509.robot;
 public class RobotMap {
 	public static final int XBOX_CONTROLLER = 0;
 	public static final int JOYSTICK_LEFT = 0;
-	public static final int JOYSTICK_RIGHT = 0;
+	public static final int JOYSTICK_RIGHT = 1;
 	
 	public static final int TALON_DRIVE_FRONT_LEFT = 8;
 	public static final int TALON_DRIVE_FRONT_RIGHT = 0;

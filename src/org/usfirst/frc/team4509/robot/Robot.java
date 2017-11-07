@@ -22,11 +22,12 @@ public class Robot extends IterativeRobot {
 
 	public static final DrivingSubsystem  drivingSubsystem  = new DrivingSubsystem();
 	public static final ClimbingSubsystem climbingSubsystem = new ClimbingSubsystem();
-	public static final GateSubsystem gateSubsystem = new GateSubsystem();
+	public static final GateSubsystem     gateSubsystem     = new GateSubsystem();
+	public static final SensorSubsystem   sensorSubsystem   = new SensorSubsystem();
 	public static OI oi;
 
 	Command autonomousCommand;
-	SendableChooser<Command> chooser = new SendableChooser<>();
+	SendableChooser<? extends Command> chooser = new SendableChooser<>();
 
 	/**
 	 * This function is run when the robot is first started up and should be

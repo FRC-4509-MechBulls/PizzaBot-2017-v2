@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class DrivingSubsystem extends Subsystem {
 	
-	public CANTalon frontLeft, frontRight, backLeft, backRight;
+	private CANTalon frontLeft, frontRight, backLeft, backRight;
 	private int leftSpeed, rightSpeed;
 
 	public void initDefaultCommand() {

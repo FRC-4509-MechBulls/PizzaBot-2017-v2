@@ -32,6 +32,7 @@ public class OI {
 	public int getRightSpeed() {
 		return (int)(1 * rStick.getY() * this.getBaseSpeed());
 	}
+	
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
 	//// joystick.
