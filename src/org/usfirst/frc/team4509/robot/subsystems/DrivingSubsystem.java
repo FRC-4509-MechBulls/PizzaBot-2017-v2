@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class DrivingSubsystem extends Subsystem {
 	
+	public static final int BASE_SPEED = 4;
 	private CANTalon frontLeft, frontRight, backLeft, backRight;
 	private int leftSpeed = 0, rightSpeed = 0;
 
@@ -22,6 +23,13 @@ public class DrivingSubsystem extends Subsystem {
 		this.backRight.changeControlMode(CANTalon.TalonControlMode.Voltage);
 	}
 	
+	public int getLeftSpeed() {
+		return this.leftSpeed;
+	}
+	public int getRightSpeed() {
+		return this.rightSpeed;
+	}
+	
 	public void setSpeed() {
 		this.setSpeed(Robot.oi.getLeftSpeed(), Robot.oi.getRightSpeed());
 	}
@@ -31,5 +39,9 @@ public class DrivingSubsystem extends Subsystem {
 	public void setSpeed(int leftSpeed, int rightSpeed) {
 		this.leftSpeed = leftSpeed;
 		this.rightSpeed = rightSpeed;
+	}
+	
+	public void driveForFeet(double feet) {
+		return;
 	}
 }

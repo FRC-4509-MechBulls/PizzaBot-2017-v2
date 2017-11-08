@@ -23,7 +23,7 @@ public class Robot extends IterativeRobot {
 	public static final DrivingSubsystem  drivingSubsystem  = new DrivingSubsystem();
 	public static final ClimbingSubsystem climbingSubsystem = new ClimbingSubsystem();
 	public static final GateSubsystem     gateSubsystem     = new GateSubsystem();
-	public static final SensorSubsystem   sensorSubsystem   = new SensorSubsystem();
+	public static final GyroSubsystem     gyroSubsystem     = new GyroSubsystem();
 	public static OI oi;
 
 	Command autonomousCommand;
