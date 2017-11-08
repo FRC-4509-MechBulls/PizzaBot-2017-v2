@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class DrivingSubsystem extends Subsystem {
 	
 	private CANTalon frontLeft, frontRight, backLeft, backRight;
-	private int leftSpeed, rightSpeed;
+	private int leftSpeed = 0, rightSpeed = 0;
 
 	public void initDefaultCommand() {
 		this.frontLeft  = new CANTalon(RobotMap.TALON_DRIVE_FRONT_LEFT);
