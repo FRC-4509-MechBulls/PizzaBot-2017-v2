@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class DrivingSubsystem extends Subsystem {
 	
-	public static final int BASE_SPEED = 4;
+	public static int baseSpeed = 4;
 	public static final double FEET_PER_SECOND = 0;
 	private CANTalon frontLeft, frontRight, backLeft, backRight;
 	private int leftSpeed = 0, rightSpeed = 0;

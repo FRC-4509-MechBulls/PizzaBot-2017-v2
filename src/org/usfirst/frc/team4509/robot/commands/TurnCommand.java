@@ -34,11 +34,11 @@ public class TurnCommand extends Command {
 		
 		while(Math.abs(gyroDiff) > 0.5) {
 			while(gyroDiff < -0.5)
-				Robot.drivingSubsystem.setSpeed(-1 + (int)(-1 * DrivingSubsystem.BASE_SPEED * (gyroDiff / 90)),
-				                                -1 + (int)(-1 * DrivingSubsystem.BASE_SPEED * (gyroDiff / 90)));
+				Robot.drivingSubsystem.setSpeed(-1 + (int)(-1 * DrivingSubsystem.baseSpeed * (gyroDiff / 90)),
+				                                -1 + (int)(-1 * DrivingSubsystem.baseSpeed * (gyroDiff / 90)));
 			while(gyroDiff > 0.5)
-				Robot.drivingSubsystem.setSpeed(1 + (int)(DrivingSubsystem.BASE_SPEED * (gyroDiff / 90)),
-				                                1 + (int)(DrivingSubsystem.BASE_SPEED * (gyroDiff / 90)));
+				Robot.drivingSubsystem.setSpeed(1 + (int)(DrivingSubsystem.baseSpeed * (gyroDiff / 90)),
+				                                1 + (int)(DrivingSubsystem.baseSpeed * (gyroDiff / 90)));
 		}
 		
 		this.isFinished = true;

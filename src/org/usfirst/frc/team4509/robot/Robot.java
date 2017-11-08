@@ -36,6 +36,7 @@ public class Robot extends edu.wpi.first.wpilibj.IterativeRobot {
 	public void robotInit() {
 		oi = new OI();
 		oi.gateTrigger.whenPressed(new ToggleGateCommand());
+		oi.climbTrigger.whenPressed(new ClimbCommand());
 		//chooser.addDefault("Default Auto", new DriveCommand());
 		//chooser.addObject("My Auto", new MyAutoCommand());
 		//SmartDashboard.putData("Auto mode", chooser);

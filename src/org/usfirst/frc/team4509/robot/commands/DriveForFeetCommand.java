@@ -28,9 +28,9 @@ public class DriveForFeetCommand extends Command {
 		Timer timer = new Timer();
 		double startTime = timer.get();
 		if(this.feet > 0)
-			Robot.drivingSubsystem.setSpeed(DrivingSubsystem.BASE_SPEED);
+			Robot.drivingSubsystem.setSpeed(DrivingSubsystem.baseSpeed);
 		else
-			Robot.drivingSubsystem.setSpeed(-1 * DrivingSubsystem.BASE_SPEED);
+			Robot.drivingSubsystem.setSpeed(-1 * DrivingSubsystem.baseSpeed);
 		while(timer.get() - startTime < this.secondsToDriveFor) {}
 		this.isFinished = true;
 	}
