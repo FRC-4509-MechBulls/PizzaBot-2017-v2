@@ -6,6 +6,11 @@ import org.usfirst.frc.team4509.robot.RobotMap;
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
+/**
+ * Governs the talons that are in charge of driving
+ * 
+ * @author Kyle Brott
+ */
 public class DrivingSubsystem extends Subsystem {
 	
 	public static final int BASE_SPEED = 4;
@@ -31,7 +36,7 @@ public class DrivingSubsystem extends Subsystem {
 	}
 	
 	public void setSpeed() {
-		this.setSpeed(Robot.oi.getLeftSpeed(), Robot.oi.getRightSpeed());
+		this.setSpeed(Robot.oi.getLeftSpeed(), Robot.oi.getRightSpeed()); // get speed from controls
 	}
 	public void setSpeed(int speed) {
 		this.setSpeed(-1 * speed, speed);
@@ -41,7 +46,4 @@ public class DrivingSubsystem extends Subsystem {
 		this.rightSpeed = rightSpeed;
 	}
 	
-	public void driveForFeet(double feet) {
-		return;
-	}
 }

@@ -6,6 +6,11 @@ import org.usfirst.frc.team4509.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.Solenoid;
 
+/**
+ * Governs the solenoid that operates the gate
+ * 
+ * @author Kyle Brott
+ */
 public class GateSubsystem extends Subsystem {
 	
 	private Solenoid solenoid;

@@ -4,6 +4,11 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc.team4509.robot.RobotMap;
 import com.ctre.CANTalon;
 
+/**
+ * Governs the talons that are in charge of climbing
+ * 
+ * @author Kyle Brott
+ */
 public class ClimbingSubsystem extends Subsystem {
 	
 	private CANTalon left, right;

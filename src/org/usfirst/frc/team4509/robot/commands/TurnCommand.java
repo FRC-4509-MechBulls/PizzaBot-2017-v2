@@ -5,6 +5,12 @@ import org.usfirst.frc.team4509.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
 
+/**
+ * Stops and turns the robot to the given angle
+ * Has a +/- 0.5 degree margin of error
+ * 
+ * @author Kyle Brott
+ */
 public class TurnCommand extends Command {
 	
 	private boolean isFinished;
@@ -25,19 +31,16 @@ public class TurnCommand extends Command {
 	@Override
 	protected void execute() {
 		double gyroDiff = this.targetAngle - Robot.gyroSubsystem.getAngle();
+		
 		while(Math.abs(gyroDiff) > 0.5) {
-			
-			while(gyroDiff < -0.5) {
+			while(gyroDiff < -0.5)
 				Robot.drivingSubsystem.setSpeed((int)(-1 * DrivingSubsystem.BASE_SPEED * (gyroDiff / 90)),
 				                                (int)(-1 * DrivingSubsystem.BASE_SPEED * (gyroDiff / 90)));
-			}
-			
-			while(gyroDiff > 0.5) {
+			while(gyroDiff > 0.5)
 				Robot.drivingSubsystem.setSpeed((int)(DrivingSubsystem.BASE_SPEED * (gyroDiff / 90)),
 				                                (int)(DrivingSubsystem.BASE_SPEED * (gyroDiff / 90)));
-			}
-			
 		}
+		
 		this.isFinished = true;
 	}
 

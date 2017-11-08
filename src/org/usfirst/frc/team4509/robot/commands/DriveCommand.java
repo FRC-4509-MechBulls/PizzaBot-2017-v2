@@ -5,7 +5,9 @@ import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc.team4509.robot.Robot;
 
 /**
- *	Drives the robot forward
+ *	Drives the robot forward until interrupted
+ *
+ *	@author Kyle Brott
  */
 public class DriveCommand extends Command {
 	
