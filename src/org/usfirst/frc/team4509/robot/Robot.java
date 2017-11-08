@@ -1,7 +1,6 @@
 
 package org.usfirst.frc.team4509.robot;
 
-import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -18,7 +17,7 @@ import org.usfirst.frc.team4509.robot.subsystems.*;
  * creating this project, you must also update the manifest file in the resource
  * directory.
  */
-public class Robot extends IterativeRobot {
+public class Robot extends edu.wpi.first.wpilibj.IterativeRobot {
 
 	public static final DrivingSubsystem  drivingSubsystem  = new DrivingSubsystem();
 	public static final ClimbingSubsystem climbingSubsystem = new ClimbingSubsystem();
@@ -27,7 +26,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 
 	Command autonomousCommand;
-	SendableChooser<? extends Command> chooser = new SendableChooser<>();
+	SendableChooser<Command> chooser = new SendableChooser<>();
 
 	/**
 	 * This function is run when the robot is first started up and should be

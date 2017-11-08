@@ -15,6 +15,7 @@ public class OI {
 	public Joystick lStick = new Joystick(RobotMap.JOYSTICK_LEFT);
 	public Joystick rStick = new Joystick(RobotMap.JOYSTICK_RIGHT);
 	public Button gateTrigger = new JoystickButton(lStick, 1);
+	public Button climbTrigger = new JoystickButton(rStick, 1);
 	public int getBaseSpeed() {
 		double throttle = this.rStick.getThrottle();
 		if(throttle >= -1 && throttle < -0.25)
